@@ -9,7 +9,7 @@ function fetchPosts() {
             return response.json();
         })
         .then(posts => {
-            console.log(posts); // Log posts to console
+            console.log(posts); 
             displayPosts(posts);
         })
         .catch(error => {
@@ -19,7 +19,7 @@ function fetchPosts() {
 
 function displayPosts(posts) {
     const postsDiv = document.getElementById('posts');
-    postsDiv.innerHTML = ''; // Clear any existing content
+    postsDiv.innerHTML = ''; 
 
     posts.forEach(post => {
         const postDiv = document.createElement('div');
