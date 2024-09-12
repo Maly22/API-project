@@ -32,4 +32,16 @@ function displayPosts(posts) {
     });
 }
 
-document.addEventListener('DOMContentLoaded', fetchPosts);
+document.addEventListener('DOMContentLoaded', () => {
+    
+    fetchPosts('https://jsonplaceholder.typicode.com/posts');
+
+    //  link handling
+    document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', event => {
+            event.preventDefault();
+            const url = event.target.getAttribute('data-url');
+            fetchPosts(url);
+        });
+    });
+});
