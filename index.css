@@ -36,3 +36,8 @@ h1 {
     color: #22D4FD; 
     padding-left: 35%;
 }
+
+.error {
+    color: red;
+    font-weight: bold;
+}

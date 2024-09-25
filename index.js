@@ -17,6 +17,15 @@ function fetchPosts(apiUrl) {
         });
 }
 
+function displayError(message) {
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'error';
+    errorDiv.textContent = message;
+
+    const postsDiv = document.getElementById('posts');
+    postsDiv.innerHTML = '';
+    postsDiv.appendChild(errorDiv);
+}
 
 function displayPosts(posts) {
     const postsDiv = document.getElementById('posts');
