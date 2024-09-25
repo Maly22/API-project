@@ -35,10 +35,25 @@ function displayPosts(posts) {
         const postDiv = document.createElement('div');
         postDiv.className = 'post';
         postDiv.innerHTML = `
-            <h2>${post.title}</h2>
-            <p>${post.body}</p>
+            <h2>${post.title || post.name}</h2>
+            <p>${post.body || post.body}</p>
         `;
         postsDiv.appendChild(postDiv);
+    });
+}
+
+function displayComments(comments) {
+    const postsDiv = document.getElementById('posts');
+    postsDiv.innerHTML = ''; 
+
+    comments.forEach(comment => {
+        const commentDiv = document.createElement('div');
+        commentDiv.className = 'comment';
+        commentDiv.innerHTML = `
+            <h2>${comment.name}</h2>
+            <p>${comment.body}</p>
+        `;
+        postsDiv.appendChild(commentDiv);
     });
 }
 
