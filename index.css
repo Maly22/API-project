@@ -4,7 +4,7 @@ body {
 }
 
 nav {
-    background-color: #3366cc;
+    background-color: #22D4FD;
     color: #fff;
     padding: 10px;
 }
@@ -23,12 +23,16 @@ nav a:hover {
     margin-top: 20px;
 }
 
+.post1{
+    font-size: larger;
+}
 .post {
-    border: 1px solid #3366cc;
+    border: 1px solid #22D4FD;
     padding: 10px;
     margin-bottom: 10px;
 }
 
 h1 {
-    color: #3366cc; 
+    color: #22D4FD; 
+    padding-left: 35%;
 }

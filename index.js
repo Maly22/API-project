@@ -1,7 +1,7 @@
 const url = 'https://jsonplaceholder.typicode.com/posts';
 
-function fetchPosts() {
-    fetch(url)
+function fetchPosts(apiUrl) {
+    fetch(apiUrl)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Failed to fetch posts');
@@ -16,6 +16,7 @@ function fetchPosts() {
             console.error('Error:', error);
         });
 }
+
 
 function displayPosts(posts) {
     const postsDiv = document.getElementById('posts');
@@ -40,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('nav a').forEach(link => {
         link.addEventListener('click', event => {
             event.preventDefault();
-            const url = event.target.getAttribute('data-url');
-            fetchPosts(url);
+            const apiUrl = event.target.getAttribute('data-url');
+            fetchPosts(apiUrl);
         });
     });
 });
